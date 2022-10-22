@@ -85,57 +85,30 @@ public class AtmSimulation
 				 //--> switch according to the user's option
 				 switch(option)
 				 {
-					 case 'B':
-
-						 					case 'b':
-
-						 							 JOptionPane.showMessageDialog(null, "Your balance is R" + balance, "Balance", JOptionPane.INFORMATION_MESSAGE);
-
-													 							 break;
-
-
-
-																				 					case 'D':
-
-																				 					case 'd':
-
-																				 							 amount = Double.parseDouble(JOptionPane.showInputDialog(null, "Please enter the amount to deposit", "Deposit", JOptionPane.INFORMATION_MESSAGE));
-
-																											 							 balance = balance + amount;
-
-																																		 							 break;
-
-
-
-																																									 					case 'W':
-
-																																									 					case 'w':
-
-																																									 							 amount = Double.parseDouble(JOptionPane.showInputDialog(null, "Please enter the amount to withdraw", "Withdraw",  JOptionPane.INFORMATION_MESSAGE));
-
-																																																 							 if(amount < balance)
-
-																																																								 							 {
-
-																																																																 								 balance = balance - amount;
-
-																																																																								 							 }
-
-																																																							 							 else
-
-																																																															 							 {
-
-																																																																							 								 JOptionPane.showMessageDialog(null, "Insufficient funds", "No enough money", JOptionPane.ERROR_MESSAGE);
-
-																																																																															 							 }
-
-																																																														 							 break;
-
-
-
-																																																																					 					default:
-
-																																																																					 							JOptionPane.showMessageDialog(null, "Invalid code entered. Please enter either B/b, D/d, W/w or E/e.", "Invalid code", JOptionPane.ERROR_MESSAGE);
+					case 'B':
+					case 'b':
+						 JOptionPane.showMessageDialog(null, "Your balance is R" + balance, "Balance", JOptionPane.INFORMATION_MESSAGE);
+						 break;
+					case 'D':
+					case 'd':
+						amount = Double.parseDouble(JOptionPane.showInputDialog(null, "Please enter the amount to deposit", "Deposit", JOptionPane.INFORMATION_MESSAGE));
+						balance = balance + amount;
+						break;
+					case 'W':
+					case 'w':
+						 amount = Double.parseDouble(JOptionPane.showInputDialog(null, "Please enter the amount to withdraw", "Withdraw",  JOptionPane.INFORMATION_MESSAGE));
+						 if(amount < balance)
+						 {
+							 balance = balance - amount; 
+						 }
+						 else
+						 {
+							 JOptionPane.showMessageDialog(null, "Insufficient funds", "No enough money", JOptionPane.ERROR_MESSAGE);
+						 }
+						 break;
+				         default:
+						 JOptionPane.showMessageDialog(null, "Invalid code entered. Please enter either B/b, D/d, W/w or E/e.", "Invalid code", JOptionPane.ERROR_MESSAGE);
+																																																																							 								 JOptionPane.showMessageDialog(null, "Insufficient fun																																																																 							JOptionPane.showMessageDialog(null, "Invalid code entered. Please enter either B/b, D/d, W/w or E/e.", "Invalid code", JOptionPane.ERROR_MESSAGE);
 				 }
 
 			 }
@@ -146,3 +119,4 @@ public class AtmSimulation
 		 JOptionPane.showMessageDialog(null, "GoodBye", "End of program", JOptionPane.INFORMATION_MESSAGE);
 
 	}
+}
